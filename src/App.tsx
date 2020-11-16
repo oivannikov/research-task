@@ -20,9 +20,9 @@ const App: React.FC = () => {
             <Redirect to="/todos"/>
           </Route> */}
           
-          <Route component={TodosPage} path={`${process.env.PUBLIC_URL}/`} exact />
-          <Route component={AboutPage} path={`${process.env.PUBLIC_URL}/about`} />
-          <Redirect to={`${process.env.PUBLIC_URL}/`} />
+          <Route component={TodosPage} path="/" exact />
+          <Route component={AboutPage} path="/about" />
+          <Redirect to="/" />
         </Switch>
       </div>
     </>
