@@ -20,7 +20,7 @@ const App: React.FC = () => {
           
           <Route component={TodosPage} path="/" exact />
           <Route component={AboutPage} path="/about" />
-          {/* <Redirect to="/"/> */}
+          <Redirect to="/"/>
         </Switch>
       </div>
     </>
