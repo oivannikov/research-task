@@ -3,7 +3,7 @@ import React from 'react';
 import { Navbar } from './components/Navbar/Navbar';
 import { TodosPage } from './pages/TodosPage/TodosPage';
 
-import { Route, BrowserRouter, Switch } from 'react-router-dom';
+import { Route, BrowserRouter, Switch, Redirect } from 'react-router-dom';
 
 import { AboutPage } from './pages/AboutPage/AboutPage';
 
