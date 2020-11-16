@@ -15,11 +15,7 @@ const App: React.FC = () => {
     <>
       <Navbar />
       <div className="container">
-        <Switch>
-          {/* <Route exact path="/">
-            <Redirect to="/todos"/>
-          </Route> */}
-          
+        <Switch>      
           <Route component={TodosPage} path="/" exact />
           <Route component={AboutPage} path="/about" />
           <Redirect to="/" />
