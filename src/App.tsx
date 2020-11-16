@@ -14,11 +14,11 @@ const App: React.FC = () => {
       <Navbar />
       <div className="container">
         <Switch>
-          <Route exact path="/">
+          {/* <Route exact path="/">
             <Redirect to="/todos"/>
-          </Route>
+          </Route> */}
           
-          <Route component={TodosPage} path="/todos" />
+          <Route component={TodosPage} path="/" exact />
           <Route component={AboutPage} path="/about" />
         </Switch>
       </div>
