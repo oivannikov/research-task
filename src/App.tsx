@@ -7,6 +7,8 @@ import { Route, BrowserRouter, Switch, Redirect } from 'react-router-dom';
 
 import { AboutPage } from './pages/AboutPage/AboutPage';
 
+console.log(process.env.PUBLIC_URL);
+
 const App: React.FC = () => {
   
   return (
@@ -18,9 +20,9 @@ const App: React.FC = () => {
             <Redirect to="/todos"/>
           </Route> */}
           
-          <Route component={TodosPage} path="/" exact />
-          <Route component={AboutPage} path="/about" />
-          <Redirect to="/"/>
+          <Route component={TodosPage} path={`${process.env.PUBLIC_URL}/`} exact />
+          <Route component={AboutPage} path={`${process.env.PUBLIC_URL}/about`} />
+          <Redirect to={`${process.env.PUBLIC_URL}/`} />
         </Switch>
       </div>
     </>
