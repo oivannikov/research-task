@@ -1,2 +1,0 @@
-(this["webpackJsonpresearch-task"]=this["webpackJsonpresearch-task"]||[]).push([[0],{24:function(e,s,t){"use strict";t.r(s);var c=t(3),r=(t(0),t(8)),a=t.n(r),n=t(10),i=function(){return Object(c.jsx)("div",{className:"app"})};a.a.render(Object(c.jsx)(n.a,{children:Object(c.jsx)(i,{})}),document.getElementById("root"))}},[[24,1,2]]]);
-//# sourceMappingURL=main.1f6634cc.chunk.js.map
