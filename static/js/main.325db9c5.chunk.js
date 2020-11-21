@@ -1,2 +1,0 @@
-(this["webpackJsonpresearch-task"]=this["webpackJsonpresearch-task"]||[]).push([[0],{16:function(e,t,c){},25:function(e,t,c){"use strict";c.r(t);var s=c(2),n=(c(0),c(8)),r=c.n(n),a=c(10),i=(c(16),function(){return Object(s.jsx)("div",{className:"app",children:Object(s.jsx)("h1",{children:"Hello Typescript"})})});r.a.render(Object(s.jsx)(a.a,{children:Object(s.jsx)(i,{})}),document.getElementById("root"))}},[[25,1,2]]]);
-//# sourceMappingURL=main.325db9c5.chunk.js.map
