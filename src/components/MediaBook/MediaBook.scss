@@ -1,0 +1,19 @@
+.book {
+  max-width: 250px;
+  margin: 10px;
+
+  &__media {
+    height: 90px,
+  }
+
+  &__author {
+    padding: 5px;
+    text-align: right;
+  }
+
+  &__name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}

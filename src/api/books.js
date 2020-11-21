@@ -1,7 +1,8 @@
-// const BASE_URL = `https://www.anapioficeandfire.com/api/`;
+const BASE_URL = `https://www.anapioficeandfire.com/api/books`;
 
-// async function getBooks() {
-//   const response = await fetch(`${BASE_URL}/books`);
+export async function getBooks() {
+  const response = await fetch(`${BASE_URL}`);
+  const books = await response.json();
   
-//   console.log(response);
-// }
+  return books;
+}
