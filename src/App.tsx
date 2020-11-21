@@ -12,7 +12,6 @@ import './App.scss';
 
 const App: React.FC = () => {
   const [books, setBooks] = useState<IBook[]>([]);
-  // const [currentBook, setCurrentBook] = useState<IBook>({});
   
   useEffect(() => {
     getBooks()
@@ -30,14 +29,11 @@ const App: React.FC = () => {
   
         <Route 
           path="/books/"
-          component={() => <BookList books={books} /> }
+          component={() => <BookList books={books}  /> }
           exact
         />
 
-        <Route
-          path="/books/:bookId"
-          // component={() => <CurrentBook={currentBook} /> }
-        />
+        <Route path="/books/:bookId" component={CurrentBook} />
       </Switch>
     </div>
   );

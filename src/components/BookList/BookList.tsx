@@ -23,7 +23,7 @@ const images: string[] = [
   "https://99px.ru/sstorage/53/2018/06/tmb_231566_464290.jpg"
 ];
 
-export const BookList: React.FC<BookListProps> = ({ books }) => {  
+export const BookList: React.FC<BookListProps> = ({ books }) => {
   return (
     <div className="books">
     {

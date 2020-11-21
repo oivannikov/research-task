@@ -2,6 +2,20 @@
   max-width: 250px;
   margin: 10px;
 
+  &:hover {
+    .book__read-more {
+      display: block;
+    }
+
+    .book__number-pages {
+      display: none;
+    }
+
+    .book__info {
+      justify-content: flex-start;
+    } 
+  }
+
   &__media {
     height: 90px,
   }
@@ -15,5 +29,19 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+  }
+
+  &__info {
+    justify-content: center;
+  }
+
+  & &__number-pages,
+  &__read-more {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  &__read-more {
+    display: none;
   }
 }

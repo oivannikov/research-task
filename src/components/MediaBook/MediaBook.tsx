@@ -7,9 +7,7 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-
 
 import { IBook } from '../../interfaces';
 
@@ -21,6 +19,10 @@ interface BookProps {
 }
 
 export const MediaBook: React.FC<BookProps> = ({ book, images }) => {
+  const bookId: number = +book.url.split('/').slice(-1)[0];
+
+  console.log(bookId);
+  
   return (
     <>
       <Card className="book">
@@ -44,13 +46,15 @@ export const MediaBook: React.FC<BookProps> = ({ book, images }) => {
               Books form a worldview - by reading the right books, a person forms a worldview, expands and deepens his view of the world.
             </Typography>
           </CardContent>
-
         </CardActionArea>
-        <CardActions>
-          <Button size="small" color="primary">
+  
+        <CardActions className="book__info">
+          <NavLink className="book__read-more" to={`/books/${bookId}`}>
             Learn More
-          </Button>
-          <Typography variant="body2" color="textSecondary" component="span">
+          </NavLink>
+        
+
+          <Typography className="book__number-pages" variant="body2" color="textSecondary" component="p">
             {book.numberOfPages}
           </Typography>
         </CardActions>
