@@ -9,5 +9,5 @@ export interface IBook {
   povCharacters: string[],
   publisher: string,
   released: string,
-  url: string,  
+  url: string,
 }

@@ -6,3 +6,10 @@ export async function getBooks() {
   
   return books;
 }
+
+export async function getBookByid(bookId: number) {
+  const response = await fetch(`${BASE_URL}/${bookId}`);
+  const book = await response.json();
+
+  return book;
+}

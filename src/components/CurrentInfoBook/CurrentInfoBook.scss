@@ -1,0 +1,60 @@
+.info {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  background-image: url('https://lh3.googleusercontent.com/proxy/LqQrj76iBfvIRzk6cRiXU73KGczhtOohNqUQDJrYYnWpgGpMz6zK58ASyhQGY2WI2o7KRYKCfzdykHzoImeXfM9W_rwY3be5Xm_67RabzUZ7JX2SaP0xRFwIYu32O1COyUGlBRKBqVznmOXRnfE');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  padding: 20px 50px;
+
+  &__name-book {
+    text-align: center;
+  }
+
+  &__content {
+    margin: 50px auto;
+    width: 800px;
+    line-height: 26px;
+  }
+
+  &__summary-book {
+    display: flex;
+    flex-grow: 1;
+    margin-top: 40px;
+    width: 100%;
+    font-size: 18px;
+  }
+
+  &__footer-book {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+  }
+
+  &__author {
+    letter-spacing: 2px;
+  }
+
+  &__company {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-align: center;
+  }
+
+  &__publisher,
+  &__type {
+    display: block;
+    margin-top: 5px;
+  }
+}
+
+.currentBook .characters {
+  height: 100vh;
+  background-image: url('https://img1.goodfon.ru/wallpaper/big/3/25/tkan-chernaya-vyazanaya-tekstura.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 30%;
+  z-index: -1;
+}
