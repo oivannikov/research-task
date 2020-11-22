@@ -1,9 +1,10 @@
 import React from 'react';
-import { IBook } from '../../interfaces';
+
 import { SideBarBook } from '../SideBarBook/SideBarBook';
 
-import './CurrentInfoBook.scss';
+import { IBook } from '../../interfaces';
 
+import './CurrentInfoBook.scss';
 interface CurrentBookProps {
   currentBook: IBook,
 }
@@ -37,7 +38,7 @@ export const CurrentInfoBook: React.FC<CurrentBookProps> = ({ currentBook }) => 
           <div className="info__company">
             <p className="info__country">Сountry: { country }</p>
             <span className="info__publisher">Publisher: { publisher }</span>
-            <span className="info__type">Media Type: {mediaType}</span>
+            <span className="info__type">Media Type: { mediaType }</span>
           </div>
         </div>
       </div>

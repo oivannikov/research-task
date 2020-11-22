@@ -13,14 +13,11 @@ import './CurrentBook.scss';
 export const CurrentBook: React.FC = () => {
   const [book, setBook] = useState<IBook>();
   const { bookId } = useParams<{ bookId: string }>();
-  
+
   useEffect(() => {
-    getBookByid(+bookId)
-      .then(book => setBook(book));
+    getBookByid(+bookId).then(book => setBook(book));
   }, []);
 
-  console.log(book);
-  
   return (
     <div className="currentBook">
       { book?.name ? <CurrentInfoBook currentBook={book} /> : <CircularProgress /> }

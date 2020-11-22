@@ -8,24 +8,29 @@ import { ICharacter } from '../../interfaces';
 
 import './SideBarBook.scss';
 
-type povChars = {
+type PovChars = {
   povCharacters: string[];
 }
 
-export const SideBarBook: React.FC<povChars> = ({ povCharacters }) => {
+export const SideBarBook: React.FC<PovChars> = ({ povCharacters }) => {
   const [currentCharacters, setCurrentCharacters] = useState<ICharacter[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     const requests = povCharacters.map(povCharacter => getCurrentCharacter(povCharacter));
     
+    setIsLoading(true);
     Promise.all(requests)
-      .then(characters => setCurrentCharacters(characters));
+      .then(characters => {
+        setCurrentCharacters(characters);
+        setIsLoading(false);
+      });
 
   }, []);
 
   return (
     <div className="sidebar">
-      { currentCharacters.length === 0 ? <CircularProgress /> : <ListCharacter characters={currentCharacters} /> }
+      { isLoading ? <CircularProgress /> : <ListCharacter characters={currentCharacters} /> }
     </div>
   );
 }
