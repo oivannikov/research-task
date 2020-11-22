@@ -41,7 +41,7 @@ export const MediaBook: React.FC<MediaBookProps> = ({ book, images }) => {
           <NavLink className="book__read-more" to={`/books/${bookId}`}>Learn More</NavLink>
 
           <Typography className="book__number-pages" variant="body2" color="textSecondary" component="p">
-            { book.numberOfPages }
+            Number of pages { book.numberOfPages }
           </Typography>
         </CardActions>
       </Card>
