@@ -1,5 +1,6 @@
 import React from 'react';
 import { IBook } from '../../interfaces';
+import { SideBarBook } from '../SideBarBook/SideBarBook';
 
 import './CurrentInfoBook.scss';
 
@@ -8,14 +9,14 @@ interface CurrentBookProps {
 }
 
 export const CurrentInfoBook: React.FC<CurrentBookProps> = ({ currentBook }) => {
-  const { name, country, authors, publisher, mediaType } = currentBook;
+  const { name, country, authors, publisher, mediaType, povCharacters } = currentBook;
 
   return (
     <>
       <div className="info">
-        <h2 className="info__name-book">
+        <h3 className="info__name-book">
           { name }
-        </h2>
+        </h3>
   
         <div className="info__content">
           <h4>Summary</h4>
@@ -41,10 +42,7 @@ export const CurrentInfoBook: React.FC<CurrentBookProps> = ({ currentBook }) => 
         </div>
       </div>
 
-      <div className="characters">
-        {/* { <SiteBarBook /> } */}
-        <h1>dsvsdv</h1>
-      </div>
+      <SideBarBook povCharacters={povCharacters} />
     </>
   );
 }

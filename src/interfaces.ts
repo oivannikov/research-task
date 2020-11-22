@@ -11,3 +11,20 @@ export interface IBook {
   released: string,
   url: string,
 }
+export interface ICharacter {
+  name: string,
+  general: string,
+  culture?: string,
+  born?: string | number,
+  died?: string | number,
+  titles?: string[],
+  aliases?: string[],
+  father?: string,
+  mother?: string,
+  spouse: string,
+  allegiances: string[],
+  books: string[],
+  povBooks?: any[],
+  tvSevies?: string[],
+  playedBy?: string[],
+}
