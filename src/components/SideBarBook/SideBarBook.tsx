@@ -30,7 +30,7 @@ export const SideBarBook: React.FC<PovChars> = ({ povCharacters }) => {
 
   return (
     <div className="sidebar">
-      { isLoading ? <CircularProgress /> : <ListCharacter characters={currentCharacters} /> }
+      { isLoading ? <CircularProgress className="sidebar__color" /> : <ListCharacter characters={currentCharacters} /> }
     </div>
   );
 }
