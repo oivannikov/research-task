@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 
+import { useParams, NavLink } from 'react-router-dom';
+
 import CircularProgress from '@material-ui/core/CircularProgress';
 import { CurrentInfoBook } from '../CurrentInfoBook/CurrentInfoBook';
 
-import { useParams } from 'react-router-dom';
 import { getBookByid } from '../../api/books';
 
 import { IBook } from '../../interfaces';

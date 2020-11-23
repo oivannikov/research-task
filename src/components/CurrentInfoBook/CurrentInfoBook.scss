@@ -22,7 +22,7 @@
     display: flex;
     flex-grow: 1;
     width: 100%;
-    font-size: 18px;
+    font-size: 16px;
     margin-top: 40px;
   }
 
@@ -48,4 +48,14 @@
     display: block;
     margin-top: 5px;
   }
+}
+
+.back-button {
+  position: absolute;
+  left: 80px;
+  bottom: 20px;
+  width: 50px;
+  font-size: 50px;
+  color: #00b8d4;
+  cursor: pointer;
 }

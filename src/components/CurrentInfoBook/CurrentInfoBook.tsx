@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { NavLink, useHistory } from 'react-router-dom';
+
 import { SideBarBook } from '../SideBarBook/SideBarBook';
 
 import { IBook } from '../../interfaces';
@@ -11,6 +13,7 @@ interface CurrentBookProps {
 
 export const CurrentInfoBook: React.FC<CurrentBookProps> = ({ currentBook }) => {
   const { name, country, authors, publisher, mediaType, povCharacters } = currentBook;
+  const history = useHistory();
 
   return (
     <>
@@ -44,6 +47,8 @@ export const CurrentInfoBook: React.FC<CurrentBookProps> = ({ currentBook }) => 
       </div>
 
       <SideBarBook povCharacters={povCharacters} />
+
+      <button className="back-button" onClick={() => history.push("/")}>{'<'}</button>
     </>
   );
 }
